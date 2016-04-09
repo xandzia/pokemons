@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pokemons</title>
+
+    <!--for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--bootstrap files-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <div class="header">
+                <h1>Pokedex</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div id="poks" class="pokemons col-xs-7">
+
+                <hr>
+
+                <div class="col-xs-4" style="display: none;">
+                    <!--style: скрытый элемент div-->
+                    <div class="panel panel-default text-center">
+                        <div class="panel-body">
+
+                            <img src="..." alt="..." width="96px" height="96px">
+                            <div class="caption">
+                                <h3></h3>
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!---end col-xs-8->
+                   <!--ОПИСАНИЕ ПОКЕМОНА-->
+            
+            <div id="skills" class="col-xs-5" style="display: none;">
+               
+                <div class="panel panel-default text-center affix">
+                    <div class="caption">
+
+                            <img id="pokimg" src="..." alt="...">
+                            
+                                <h3></h3>
+                                <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <th>Type</th>
+                                        <th id="type">Fire</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Attack</th>
+                                        <th id="attack">52</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Defense</th>
+                                        <th id="defense">Fire</th>
+                                    </tr>
+                                    <tr>
+                                        <th>HP</th>
+                                        <th id="hp">52</th>
+                                    </tr>
+                                    <tr>
+                                        <th>SP Attack</th>
+                                        <th id="spAttack">Fire</th>
+                                    </tr>
+                                    <tr>
+                                        <th>SP Defense</th>
+                                        <th id="spDefense">52</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Speed</th>
+                                        <th id="speed">Fire</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Weight</th>
+                                        <th id="weight">52</th>
+                                    </tr>
+                                    <tr>
+                                        <th>Total moves</th>
+                                        <th id="totalMoves">52</th>
+                                    </tr>
+                                </tbody>
+</table>
+                            
+                         </div>
+                        
+                    </div>
+            
+            </div>
+
+       
+        </div>
+        
+        <div class="loadmore col-xs-7">
+                    <button id="loadmore" type="button" class="btn btn-primary" onclick="getPockemons(12, pokemons)">Load More</button>
+                </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+
+
+    <footer>
+    
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="poks.js"></script>
+
+</body>
+
+</html>
