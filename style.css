@@ -54,14 +54,14 @@ p {
 }
 .panel {
     min-width: 120px;
+    width: 20%
 }
+
 h3 {
   font-size: 1.3em; 
     font-weight: bold;
 }
-.skills {
-    width: 80%;
-}
+
 th {
     text-align: center;
     font-weight: normal;
@@ -76,11 +76,10 @@ th {
     min-width: 120px;
     width: auto;
 }
-.more {
-    min-width: 50%;
-}
+
 .pokemons {
-    min-width: 50%;
+    min-width: 120px;
+    max-width: 100%;
 }
 #loadmore {
     width: 98%;
@@ -92,4 +91,13 @@ th {
     text-align: left;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.affix {
+}
+#skills {
+    min-width: 140px;
+}
+#poks {
+    min-width: 120px;
 }

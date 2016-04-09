@@ -1,6 +1,6 @@
 var poks = $('#poks'); /*переменная для колонки с покемонами col-xs-8*/
 var pok = $('#poks>div'); /*переменная для колонки col-xs-4, для одного покемона, >(в poks взять child по тегу div)*/
-var skills = $('#skills');
+var skills = $('#skills'); /*для skills*/
 
         function writePockemonType(type, index) { /*тип покемона (параметры: тип(а на самом деле это обьект) и номер в массиве)*/
             pok.find('p').append('<a href="#" class="btn btn-xs btn-primary" role="button">' + type.name + '</a>').children().last().addClass(type.name)
@@ -8,16 +8,22 @@ var skills = $('#skills');
 
         function aboutPokemon (pok){
                 console.log($(pok.target).attr('id'));
-            $.get('http://pokeapi.co/api/v1/pokemon/'
-                  +$(pok.target).attr('id')) /*по ссылке взять инфу по id */
+            $.get('http://pokeapi.co/api/v1/pokemon/' /*по ссылке взять инфу по id */
+                  +$(pok.target).attr('id')) /*по клику выполнить*/
             .done( 
                 function skillsPokemona (data){
                     console.log(data);
                     
               
        
-                    skills.find('#type').;
-                    skills.find('#attack').text(type.attack);
+//                    skills.find('#type').;
+                    skills.find('#pokimg').attr('src', 'http://pokeapi.co/media/img/'+data.pkdx_id+'.png');
+                    skills.find('#type').empty();
+                    data.types.forEach(function(type){
+                        skills.find('#type').append('<span> '+type.name+'</span>')
+                    });
+                    skills.find('h3').text(data.name);
+                    skills.find('#attack').text(data.attack);
                     skills.find('#defense').text(data.defense);
                     skills.find('#hp').text(data.hp);
                     skills.find('#spAttack').text(data.sp_atk);
